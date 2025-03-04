@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Merchandise</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="merchandise">
+      <h1>Add New Merchandise</h1>
+      <form action="store_merchandise.php" method="POST">
+        <label for="name">Product Name:</label>
+        <input type="text" id="name" name="name" required /><br /><br />
+
+        <label for="image">Image Path (e.g., img/image.jpg):</label>
+        <input type="text" id="image" name="image" required /><br /><br />
+
+        <label for="price">Price (MYR):</label>
+        <input
+          type="number"
+          id="price"
+          name="price"
+          step="0.01"
+          required
+        /><br /><br />
+
+        <label for="description">Description:</label>
+        <textarea
+          id="description"
+          name="description"
+          rows="5"
+          required
+        ></textarea
+        ><br /><br />
+
+        <button type="submit">Add Product</button>
+      </form>
+    </div>
+  </body>
+</html>

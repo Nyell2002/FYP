@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Doffee Cafe&copy;</title>
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body>
+    <!-- NAVBAR START HERE -->
+    <div class="navbar">
+      <div class="navbar-container">
+        <a href="#home">
+          <img src="img/tugu.png" alt="logo" id="logo" />
+        </a>
+        <ul class="menu">
+          <li>
+            <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="#menus">Menu</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+          <li>
+            <a href="merchandise.php">Merchandise</a>
+          </li>
+        </ul>
+        <ul class="extra-menu">
+          <li class="navbar-xmenu">
+            <a href="#" id="ham-menu"><i data-feather="menu"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- NAVBAR ENDS HERE -->
+
+    <!-- HERO START HERE -->
+    <section class="hero" id="home">
+      <main class="content">
+        <h1>Ingat Kopi, Ingat<span>HERO!</span></h1>
+        <p>Ngopi Ngopi Dulu Boss!!</p>
+        <a href="#" class="cta" id="cta">Wanna Doffee?</a>
+      </main>
+      <!-- Popup Container -->
+      <div id="popup-container" class="popup">
+        <div class="popup-content">
+          <h2>Download Doffee Coffee!</h2>
+          <p>
+            Get the best experience with our application. Ingat Kopi Ingat
+            <span>Doffee!!</span>
+          </p>
+          <img src="img/popup.jpg" alt="bg" />
+          <a
+            href="https://play.google.com/store/search?q=mobile+legends&c=apps&hl=en_IN"
+            class="btn"
+            target="_blank"
+            >Download</a
+          >
+          <p>*This work as a sample only!!*</p>
+        </div>
+        <button id="close-popup-btn" class="btn btn-close">Close</button>
+      </div>
+    </section>
+    <!-- HERO ENDS HERE -->
+
+    <!-- ABOUT START HERE -->
+    <section class="about" id="about">
+      <h1>ABOUT <span>US</span></h1>
+      <div class="row">
+        <div class="about-img">
+          <img src="img/about.jpg" alt="About Us" />
+        </div>
+        <div class="content">
+          <h2>Why Choose Us?</h2>
+          <p>
+            Doffee Café is a place where exceptional coffee meets a welcoming
+            atmosphere. Every cup we brew is made with carefully sourced beans,
+            reflecting our passion for quality and flavor. From rich espresso
+            shots to creamy lattes and refreshing iced drinks, we offer
+            something for every coffee lover. Pair your favorite drink with our
+            freshly made bites, crafted to satisfy and complement your
+            experience.
+          </p>
+          <p>
+            More than just a café, Doffee is a space to connect, unwind, and
+            create memories. Whether you’re meeting friends, diving into work,
+            or simply taking a moment for yourself, our cozy setting and
+            friendly team are here to make your visit truly enjoyable. At Doffee
+            Café, we’re dedicated to creating a haven where every sip and bite
+            feels just right.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- ABOUT ENDS HERE -->
+
+    <!-- MENU START HERE -->
+    <section id="menus" class="menus">
+      <h1>OUR <span>MENU</span></h1>
+      <p>
+        Discover a delightful selection of freshly brewed coffees, artisan teas,
+        hearty bites, and indulgent treats crafted to satisfy every craving.
+      </p>
+      <div class="row">
+        <div class="menu-card">
+          <img
+            src="img/espresso.png"
+            alt="Despresso"
+            class="card-img"
+            data-description="Despresso: A bold, creamy coffee drink with rich flavors."
+          />
+          <h2 class="card-title">Despresso</h2>
+          <p class="card-price">--MYR 14.90--</p>
+        </div>
+        <div class="menu-card">
+          <img
+            src="img/cappuccino.png"
+            alt="Cappuccino"
+            class="card-img"
+            data-description="Kapurcino: A delightful cappuccino with chewy pearls."
+          />
+          <h2 class="card-title">Kapurcino</h2>
+          <p class="card-price">--MYR 14.90--</p>
+        </div>
+        <div class="menu-card">
+          <img
+            src="img/americano.png"
+            alt="Americano"
+            class="card-img"
+            data-description="Malayano: Iced black coffee with a touch of Malaysian charm."
+          />
+          <h2 class="card-title">Malayano</h2>
+          <p class="card-price">--MYR 11.90--</p>
+        </div>
+        <div class="menu-card">
+          <img
+            src="img/kopiko.png"
+            alt="Kopiko"
+            class="card-img"
+            data-description="KopikoKaw: Intense iced coffee for strong coffee lovers."
+          />
+          <h2 class="card-title">KopikoKaw</h2>
+          <p class="card-price">--MYR 11.90--</p>
+        </div>
+        <div class="menu-card">
+          <img
+            src="img/caramelmachiato.png"
+            alt="CaramelMachiato"
+            class="card-img"
+            data-description="Caramel Machiato: A luxurious coffee with layers of milk, espresso, and a rich caramel drizzle."
+          />
+          <h2 class="card-title">Caramel Machiato</h2>
+          <p class="card-price">--MYR 16.90--</p>
+        </div>
+        <div class="menu-card">
+          <img
+            src="img/spanishlatte.png"
+            alt="SpanishLatte"
+            class="card-img"
+            data-description="Latte Sepanyol: A creamy latte infused with Spanish-style sweetness and bold coffee flavors."
+          />
+          <h2 class="card-title">Latte Sepanyol</h2>
+          <p class="card-price">--MYR 16.90--</p>
+        </div>
+        <div class="menu-card">
+          <img
+            src="img/hazelnutlatte.png"
+            alt="HazelnutLatte"
+            class="card-img"
+            data-description="Hazel Latte: A delightful latte topped with whipped cream and hazelnut syrup for a nutty finish."
+          />
+          <h2 class="card-title">Hazel Latte</h2>
+          <p class="card-price">--MYR 14.90--</p>
+        </div>
+        <div class="menu-card">
+          <img
+            src="img/matchalatte.png"
+            alt="MatchaLatte"
+            class="card-img"
+            data-description="Latte Hijau: A unique green tea latte offering a perfect blend of creamy milk and earthy matcha."
+          />
+          <h2 class="card-title">Latte Hijau</h2>
+          <p class="card-price">--MYR 11.90--</p>
+        </div>
+      </div>
+
+      <!-- MODAL STUCTURE -->
+      <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img id="modalImage" class="modal-content" />
+        <div id="modalDescription"></div>
+      </div>
+    </section>
+    <!-- MENU ENDS HERE -->
+
+    <!-- CONTACT START HERE -->
+    <section class="contact" id="contact">
+      <h1>CONTACT <span>US</span></h1>
+      <p>
+        We’d love to hear from you! Reach out with any questions, feedback, or
+        simply reach us at our store. We’re here to connect and help.
+      </p>
+      <div class="row">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7967.153079642796!2d101.64979602733135!3d3.2053241207185383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4731df572a93%3A0x6115845a22055190!2sBlok%209%20Flat%20Jinjang!5e0!3m2!1sen!2smy!4v1734718801812!5m2!1sen!2smy"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="map"
+        ></iframe>
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input
+            type="hidden"
+            name="access_key"
+            value="22d341b2-266c-42d5-b622-7861aeeb776d"
+          />
+          <div class="input-gp">
+            <i data-feather="user"></i>
+            <input type="text" name="name" placeholder="Name" required />
+          </div>
+          <div class="input-gp">
+            <i data-feather="mail"></i>
+            <input type="email" name="email" placeholder="Email" required />
+          </div>
+          <div class="input-gp">
+            <i data-feather="phone"></i>
+            <input
+              type="text"
+              name="number"
+              placeholder="Phone Number"
+              required
+            />
+          </div>
+          <div class="input-gp">
+            <i data-feather="message-square"></i>
+            <textarea
+              name="message"
+              id="message"
+              placeholder="Your Message"
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="btn">Submit</button>
+        </form>
+      </div>
+    </section>
+    <!-- CONTACT ENDS HERE -->
+
+    <!-- FOOTER START HERE -->
+    <footer>
+      <div class="sosial">
+        <a
+          href="https://www.instagram.com/dniel.ilhn?igsh=cTZ0cW40ZmtsazM2&utm_source=qr"
+          ><i data-feather="instagram"></i
+        ></a>
+        <a href="https://x.com/dnielilhn?s=21"
+          ><i data-feather="twitter"></i
+        ></a>
+        <a href="https://www.facebook.com/share/12CB4K1K2QW/?mibextid=wwXIfr"
+          ><i data-feather="facebook"></i
+        ></a>
+      </div>
+      <div class="link">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#menus">Menu</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="credit">
+        <p>Created by <a href="">Daniel Ilhan</a> | &copy; 2024.</p>
+      </div>
+    </footer>
+    <!-- FOOTER ENDS HERE -->
+
+    <script src="js/script.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/down.js"></script>
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>

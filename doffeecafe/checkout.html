@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doffee&copy;-Checkout</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/feather-icons"></script>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="navbar-container">
+        <div class="back-nav">
+          <a href="/doffeecafe/merchandise.php" id="back-nav"
+            ><i data-feather="arrow-left-circle"></i
+          ></a>
+        </div>
+        <a href="#">
+          <img src="img/tugu.png" alt="pic" id="logo" />
+        </a>
+      </div>
+    </div>
+    <main class="checkout-container">
+      <div class="checkout-left">
+        <h2>Contact</h2>
+        <form id="checkout-form" action="process_checkout.php" method="POST">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+          <div class="checkbox-container">
+            <input type="checkbox" id="offers" name="offers" />
+            <label for="offers">Email me with news and offers</label>
+          </div>
+
+          <h2>Delivery</h2>
+          <label for="country">Country/Region</label>
+          <select id="country" name="country">
+            <option value="Malaysia">Malaysia</option>
+            <option value="Singapore">Singapore</option>
+          </select>
+
+          <div class="name-fields">
+            <div>
+              <label for="first-name">First Name</label>
+              <input
+                type="text"
+                id="first-name"
+                name="first_name"
+                placeholder="e.g. John"
+                required
+              />
+            </div>
+            <div>
+              <label for="last-name">Last Name</label>
+              <input
+                type="text"
+                id="last-name"
+                name="last_name"
+                placeholder="e.g. Doe"
+                required
+              />
+            </div>
+          </div>
+
+          <label for="address">Address</label>
+          <input
+            type="text"
+            id="address"
+            name="address"
+            placeholder="Enter your address"
+            required
+          />
+
+          <label for="city">City</label>
+          <input
+            type="text"
+            id="city"
+            name="city"
+            placeholder="Enter your city"
+            required
+          />
+
+          <label for="postal-code">Postal Code</label>
+          <input type="text" id="postal-code" name="postal_code" required />
+
+          <div class="payment-methods">
+            <h2>Payment</h2>
+            <label>
+              <input
+                type="radio"
+                name="payment"
+                value="credit-card"
+                required
+                onclick="showPaymentForm('credit-card')"
+              />
+              Credit/Debit Card
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="payment"
+                value="qr-code"
+                onclick="showPaymentForm('qr-code')"
+              />
+              QR Code Payment
+            </label>
+          </div>
+
+          <!-- Credit/Debit Card Form -->
+          <div
+            id="credit-card-form"
+            class="payment-container"
+            style="display: none"
+          >
+            <div class="card-details">
+              <label for="card-number">Card Number</label>
+              <input
+                type="text"
+                id="card-number"
+                name="card_number"
+                placeholder="1234 5678 9876 5432"
+                maxlength="19"
+                required
+              />
+              <label for="expiry-date">Expiry Date</label>
+              <input
+                type="text"
+                id="expiry-date"
+                name="expiry_date"
+                placeholder="MM/YY"
+                maxlength="5"
+                required
+              />
+              <label for="cvc">CVC / CVV</label>
+              <input
+                type="text"
+                id="cvc"
+                name="cvc"
+                placeholder="123"
+                maxlength="3"
+                required
+              />
+              <label for="cardholder-name">Name on Card</label>
+              <input
+                type="text"
+                id="cardholder-name"
+                name="cardholder_name"
+                placeholder="John Doe"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- QR Code Payment -->
+          <div
+            id="qr-code-form"
+            class="payment-container"
+            style="display: none"
+          >
+            <p>Scan the QR Code below to complete your payment:</p>
+            <img src="img/qr-code.png" alt="QR Code" class="qr-code-image" />
+          </div>
+          <input type="hidden" name="cart" id="cart-data" value="" />
+          <button type="submit" class="btn">Complete Order</button>
+        </form>
+      </div>
+
+      <div class="checkout-right">
+        <h2>Order Summary</h2>
+        <div id="cart-summary">
+          <!-- Dynamically populated with cart items -->
+          <p>Your cart is empty.</p>
+        </div>
+
+        <div class="pricing">
+          <p>Subtotal: <span id="subtotal">RM 0.00</span></p>
+          <p>Shipping: <span id="shipping">Enter shipping address</span></p>
+          <p>Total: <span id="total">RM 0.00</span></p>
+        </div>
+      </div>
+    </main>
+    <!-- FOOTER START HERE -->
+    <footer>
+      <div class="sosial">
+        <a href="#"><i data-feather="instagram"></i></a>
+        <a href="#"><i data-feather="twitter"></i></a>
+        <a href="#"><i data-feather="facebook"></i></a>
+      </div>
+      <div class="link">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#menus">Menu</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="credit">
+        <p>Created by <a href="">Daniel Ilhan</a> | &copy; 2024.</p>
+      </div>
+    </footer>
+    <!-- FOOTER ENDS HERE -->
+
+    <script>
+      function confirmCheckout() {
+        alert("Thank you for your purchase!");
+        window.location.href = "merchandise.php"; // Redirect back to merchandise page
+      }
+    </script>
+    <script src="js/order.js"></script>
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>
